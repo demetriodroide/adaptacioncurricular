@@ -1,15 +1,5 @@
-
-// 1 noticia
-
-let titulo = document.createElement("h1");
-document.querySelector("#cajas").appendChild(titulo);
-
-let descripcionprimero = document.createElement("h2");
-document.querySelector(".primeranoticia").appendChild(descripcionprimero);
-
 // constante 
 
-                     /// objeto dinamico
 const noticias = [
 {
     titulo :        "la mega fiesta",
@@ -27,3 +17,20 @@ const noticias = [
 }
 
 ];
+
+for ( let i = 0; i < noticias.length; i++){
+
+let caja = document.createElement("div");
+caja.className = "titudescri";
+document.querySelector("body").appendChild(caja);
+
+let titulo = document.createElement("h1");
+document.querySelector(".titudescri").appendChild(titulo);
+titulo.innerText = noticias[i].titulo;
+
+
+let descripcion = document.createElement("h2");
+document.querySelector(".titudescri").appendChild(descripcion);
+descripcion.innerText = noticias[i].descripcion;
+
+}
